@@ -68,7 +68,6 @@
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   -webkit-transition: all .1s ease-in;
@@ -135,7 +134,16 @@ a, button {
   font-weight: 900; }
 
 .link {
-  display: block; }
+  display: block;
+  border: 1px solid transparent; }
+  .link:focus {
+    border-color: #666666; }
+  .link:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+  .link:active {
+    background-color: #ffeecc; }
 
 .bonfair-icon {
   position: absolute;
@@ -158,46 +166,19 @@ a, button {
     right: 145%; }
 
 .wrap-img {
-  position: relative;
-  max-width: 390px;
+  padding: 15px;
+  width: 71.82131%;
+  height: auto;
+  top: 20px;
   margin-left: auto;
-  margin-right: auto; }
-  .wrap-img__top-border {
-    position: relative; }
-    .wrap-img__top-border:before, .wrap-img__top-border:after {
-      width: 26%;
-      height: 26%;
-      content: "";
-      display: block;
-      position: absolute; }
-    .wrap-img__top-border:before {
-      border-top: 1px solid #ffcc00;
-      border-left: 1px solid #ffcc00;
-      top: -3%;
-      left: -3%; }
-    .wrap-img__top-border:after {
-      border-top: 1px solid #ffcc00;
-      border-right: 1px solid #ffcc00;
-      top: -3%;
-      right: -3%; }
-  .wrap-img__bottom-border {
-    position: relative; }
-    .wrap-img__bottom-border:before, .wrap-img__bottom-border:after {
-      width: 26%;
-      height: 26%;
-      content: "";
-      display: block;
-      position: absolute; }
-    .wrap-img__bottom-border:before {
-      border-bottom: 1px solid #ffcc00;
-      border-left: 1px solid #ffcc00;
-      bottom: -3%;
-      left: -3%; }
-    .wrap-img__bottom-border:after {
-      border-bottom: 1px solid #ffcc00;
-      border-right: 1px solid #ffcc00;
-      bottom: -3%;
-      right: -3%; }
+  margin-right: auto;
+  background: -webkit-gradient(linear, left top, right top, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00)), -webkit-gradient(linear, left top, right top, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00)), -webkit-gradient(linear, left top, left bottom, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00)), -webkit-gradient(linear, left top, left bottom, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00));
+  background: -webkit-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -webkit-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -webkit-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -webkit-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%);
+  background: -o-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -o-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -o-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -o-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%);
+  background: linear-gradient(to right, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), linear-gradient(to right, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), linear-gradient(to bottom, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), linear-gradient(to bottom, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%);
+  background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: no-repeat; }
 
 .team-card {
   position: relative;
@@ -207,6 +188,8 @@ a, button {
     border: 1px solid #ffcc00;
     margin-left: auto;
     margin-right: auto; }
+  .team-card__info {
+    padding-top: 15px; }
   .team-card__title {
     margin-bottom: 60px;
     font-size: 36px;
@@ -227,7 +210,7 @@ a, button {
   .team-card__subtitle {
     margin-bottom: 26px;
     font-size: 24px; }
-  .team-card__messengers-list {
+  .team-card__socials-list {
     margin-bottom: 30px; }
   .team-card__descr {
     max-width: 73.91304%;
@@ -242,25 +225,21 @@ a, button {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
+  .transition--left {
+    left: 0; }
+  .transition--right {
+    right: 0; }
 
-.trasnsition--left {
-  left: 0; }
-
-.trasnsition--right {
-  right: 0; }
-
-.messengers-list {
-  width: 23.68421%;
-  margin-left: auto;
-  margin-right: auto;
+.socials-list {
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-  .messengers-list__item {
-    width: 22.96296%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .socials-list__item {
+    width: 5.3913%;
     height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -270,21 +249,24 @@ a, button {
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
-  .messengers-list__link {
+    align-items: center;
+    margin-right: 5px; }
+    .socials-list__item:last-child {
+      margin-right: 0; }
+  .socials-list__link {
     padding: 6.3% 0;
     display: block;
     width: 100%;
     text-align: center;
     border-radius: 50%;
     border: solid 2px #cccccc; }
-    .messengers-list__link:focus {
+    .socials-list__link:focus {
       border: solid 2px #8b8a8a; }
-    .messengers-list__link:hover {
+    .socials-list__link:hover {
       -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
-    .messengers-list__link:active {
+    .socials-list__link:active {
       background-color: #ffeecc; }
 
 .line {
