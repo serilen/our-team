@@ -82,263 +82,253 @@ a, button {
 		text-transform: uppercase;
 		position: relative;
 
-		&:after {
+		&:after,
+		&:before {
 			@include pseudo;
-			width: 1px;
-			height: 560px;
-			background-color: $color2;
-			top: 225%;
-			left: 50%;}
 		}
-	}
-
-	.title {
-		font-family: 'Roboto', sans-serif;
-		font-weight: 900;
-	}
-
-	.link {
-		display: block;
-		border: 1px solid transparent;
-
-		&:focus {
-			border-color: $color1;
-		}
-
-		&:hover {
-			transform: scale(1.2);
-		}
-
-		&:active {
-			background-color: $color3;
-		}
-	}
-
-	.bonfair-icon {
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-
-		&:before,
-		&:after {
-			@include pseudo;
-			width: 210px;
+		
+		&:before {
+			width: (450 / 1170) * 100%;
 			height: 1px;
 			background-color: $color2;
+			bottom: -50px;
+			left: 50%;
+			transform: translateX(-50%);
 		}
-
-		&:before {
-			top: 50%;
-			right: -1350%;
-		}
-
 		&:after {
-			top: 50%;
-			right: 145%;
+			width: 30px;
+			height: 18px;
+			background-color: #fff;
+			bottom: -59px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-image: url('../image/bonfire-icon.png');
 		}
 	}
+}
 
-	.wrap-img {
-		padding: 15px;
-		width: (418 / 582) *100%;
-		height: auto;
-		top: 20px;
+.title {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+}
+
+.link {
+	display: block;
+	border: 1px solid transparent;
+
+	&:focus {
+		border-color: $color1;
+	}
+
+	&:hover {
+		transform: scale(1.2);
+	}
+
+	&:active {
+		background-color: $color3;
+	}
+}
+
+.wrap-img {
+	padding: 15px;
+	width: (418 / 582) *100%;
+	height: auto;
+	top: 20px;
+	@include push--auto;
+	background: linear-gradient(to right, $color2 0%, $color2 24%, transparent 24%, transparent 76%, $color2 76%, $color2 100%), linear-gradient(to right, $color2 0%, $color2 24%, transparent 24%, transparent 76%, $color2 76%, $color2 100%), linear-gradient(to bottom, $color2 0%, $color2 24%, transparent 24%, transparent 76%, $color2 76%, $color2 100%),
+	linear-gradient(to bottom, $color2 0%, $color2 24%, transparent 24%, transparent 76%, $color2 76%, $color2 100%);
+	background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+	background-position: 0 0, 0 100%, 0 0, 100% 0;
+	background-repeat: no-repeat;
+}
+
+.team-card {
+	position: relative;
+	text-align: center;
+	padding: 120px 0 105px;
+
+	&__img {
+		border: 1px solid $color2;
 		@include push--auto;
-		background: linear-gradient(to right, $color2 0%, $color2 24%, transparent 24%, transparent 76%, $color2 76%, $color2 100%), linear-gradient(to right, $color2 0%, $color2 24%, transparent 24%, transparent 76%, $color2 76%, $color2 100%), linear-gradient(to bottom, $color2 0%, $color2 24%, transparent 24%, transparent 76%, $color2 76%, $color2 100%),
-		linear-gradient(to bottom, $color2 0%, $color2 24%, transparent 24%, transparent 76%, $color2 76%, $color2 100%);
-		background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
-		background-position: 0 0, 0 100%, 0 0, 100% 0;
-		background-repeat: no-repeat;
 	}
 
-	.team-card {
+	&__info {
+		padding-top: 15px;
+	}
+
+	&__title {
+		margin-bottom: 60px;
+		font-size: 36px;
+		line-height: 1;
 		position: relative;
-		text-align: center;
-		padding: 120px 0 105px;
 
-		&__img {
-			border: 1px solid $color2;
-			@include push--auto;
-		}
-
-		&__info {
-			padding-top: 15px;
-		}
-
-		&__title {
-			margin-bottom: 60px;
-			font-size: 36px;
-			line-height: 1;
-			position: relative;
-
-			&:after {
-				@include pseudo;
-				width: 100px;
-				height: 1px;
-				background-color: $color2;
-				bottom: -95%;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-		}
-
-		&__subtitle {
-			margin-bottom: 26px;
-			font-size: 24px;
-		}
-
-		&__socials-list {
-			margin-bottom: 30px;
-		}
-
-		&__descr {
-			max-width: (425 / 575) *100%;
-			@include push--auto;
-			margin-bottom: 22px;
-			color: #333333;
-		}
-	}
-
-	.transition {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-
-		&--left {
-			left: 0;
-		}
-
-		&--right {
-			right: 0;
-		}
-	}
-
-	.socials-list {
-		width: auto;
-		display: flex;
-		justify-content: center;
-
-		&__item {
-			width: (31 / 575) * 100%;
-			height: auto;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-right: 5px;
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-
-		&__link {
-			padding: 6.3% 0;
-			display: block;
-			width: 100%;
-			text-align: center;
-			border-radius: 50%;
-			border: solid 2px #cccccc;
-
-			&:focus {
-				border: solid 2px #8b8a8a;
-			}
-
-			&:hover {
-				transform: scale(1.1);
-			}
-
-			&:active {
-				background-color: $color3;
-			}
-		}
-	}
-
-	.line {
-		position: relative;
-		margin: auto;
-		width: 20px;
-		height: 4px;
-		background-color: $color2;
-		margin-bottom: 25px;
-
-		&:before,
 		&:after {
 			@include pseudo;
-			width: 10px;
-			height: 4px;
+			width: 100px;
+			height: 1px;
 			background-color: $color2;
-		}
-
-		&:before {
-			left: -60%;
-			top: 0;
-		}
-
-		&:after {
-			right: -65%;
-			top: 0;
+			bottom: -95%;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 
-	.btn {
-		display: block;
+	&__subtitle {
+		margin-bottom: 26px;
+		font-size: 24px;
+	}
+
+	&__socials-list {
+		margin-bottom: 30px;
+	}
+
+	&__descr {
+		position: relative;
+		max-width: (425 / 575) *100%;
 		@include push--auto;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 14px;
-		font-weight: 700;
-		color: $color1;
-		text-transform: uppercase;
-		line-height: 1;
-		padding: 6px 9px;
-		max-width: 122px;
-		background-color: #fff;
-		border: 1px solid $color2;
+		margin-bottom: 52px;
+		color: #333333;
+
+		&:after {
+			@include pseudo;
+			width: (52 / 425) * 100%;
+			height: 4px;
+			bottom: -24px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-image: linear-gradient(to right, $color2 0%, $color2 20%, transparent 20%, transparent 30%, $color2 30%, $color2 70%, transparent 70%, transparent 80%, $color2 80%, $color2 100%);
+		}
+
+	}
+}
+
+.transition {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	&--left {
+		left: 0;
+	}
+
+	&--right {
+		right: 0;
+	}
+}
+
+.socials-list {
+	width: auto;
+	display: flex;
+	justify-content: center;
+
+	&__item {
+		width: (31 / 575) * 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 5px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		padding: 6.3% 0;
+		display: block;
+		width: 100%;
+		text-align: center;
+		border-radius: 50%;
+		border: solid 2px #cccccc;
 
 		&:focus {
-			border-color: $color1;
+			border: solid 2px #8b8a8a;
 		}
 
 		&:hover {
-			color: #fff;
-			border-color: #fff;
-			background-color: $color1;
-		}			
+			transform: scale(1.1);
+		}
 
 		&:active {
 			background-color: $color3;
 		}
 	}
+}
 
-	.dots {
-		font-size: 0;
-		text-align: center;
+.btn {
+	position: relative;
+	display: block;
+	@include push--auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: $color1;
+	text-transform: uppercase;
+	line-height: 1;
+	padding: 6px 9px;
+	max-width: 122px;
+	background-color: #fff;
+	border: 1px solid $color2;
 
-		&__item {
-			display: inline-block;
-			background-color: $color2;
-			border-radius: 50%;
-			margin-right: 4px;
+	&:focus {
+		border-color: $color1;
+	}
+
+	&:hover {
+		color: #fff;
+		border-color: #fff;
+		background-color: $color1;
+	}			
+
+	&:active {
+		background-color: $color3;
+	}
+}
+
+.dots {
+	position: relative;
+	font-size: 0;
+	text-align: center;
+
+	&:after {
+		@include pseudo;
+		width: 1px;
+		height: 560px;
+		background-color: $color2;
+		bottom: 400%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__item {
+		display: inline-block;
+		background-color: $color2;
+		border-radius: 50%;
+		margin-right: 4px;
+	}
+
+	&__link {
+		display: block;
+		border-radius: 50%;
+		border: 1px solid transparent;
+		width: 11px;	
+		height: 11px;
+
+		&:focus {
+			border-color: $color1;
+			background-color: #ffeecc;
 		}
 
-		&__link {
-			display: block;
-			border-radius: 50%;
-			border: 1px solid transparent;
-			width: 11px;	
-			height: 11px;
-
-			&:focus {
-				border-color: $color1;
-				background-color: #ffeecc;
-			}
-
-			&:hover {
-				background: #fff;
-				border-color: $color2;
-			}	
-			
-			&:active {
-				background-color: #ffeecc;
-			}
+		&:hover {
+			background: #fff;
+			border-color: $color2;
+		}	
+		
+		&:active {
+			background-color: #ffeecc;
 		}
 	}
+}
 
