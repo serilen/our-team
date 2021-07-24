@@ -17,7 +17,7 @@
 //переменные 
 $color-text-base: #666666;
 $color-main-decoration: #ffcc00;
-$bg-color-active: #ffeecc;
+$bg-color-active: #ecec66;
 $bg-main: #fff;
 
 *, *:after, *:before {
@@ -64,9 +64,11 @@ a, button {
 	@include push--auto;
 	padding: 0 15px;
 }
-.section-main {
-	padding: 90px 0;
-	&__descr {
+
+.header {
+	padding-top: 90px;
+	margin-bottom: 40px;
+	&__slogan {
 		color: #898f8f;
 		text-transform: uppercase;
 		text-align: center;
@@ -79,9 +81,9 @@ a, button {
 		font-size: 60px;
 		line-height: 1.05;
 		text-align: center;
-		margin-bottom: 30px;
 		text-transform: uppercase;
 		position: relative;
+		padding-bottom: 40px;
 
 		&:after,
 		&:before {
@@ -92,7 +94,7 @@ a, button {
 			width: (450 / 1170) * 100%;
 			height: 1px;
 			background-color: $color-main-decoration;
-			bottom: -50px;
+			bottom: 0;
 			left: 50%;
 			transform: translateX(-50%);
 		}
@@ -100,9 +102,9 @@ a, button {
 			width: 30px;
 			height: 18px;
 			background-color: $bg-main;
-			bottom: -59px;
+			bottom: 0;
 			left: 50%;
-			transform: translateX(-50%);
+			transform: translate(-50%, 50%);
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-image: url('../image/bonfire-icon.png');
@@ -145,10 +147,26 @@ a, button {
 	background-repeat: no-repeat;
 }
 
-.team-card {
+.section-main {
+	padding-bottom: 75px;
+
+}
+
+.slider {
 	position: relative;
+	padding-top: 75px;
 	text-align: center;
-	padding: 120px 0 105px;
+	margin-bottom: 110px;
+
+	&:after {
+		@include pseudo;
+		width: 1px;
+		height: 560px;
+		background-color: $color-main-decoration;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
 	&__img {
 		border: 1px solid $color-main-decoration;
@@ -160,7 +178,8 @@ a, button {
 	}
 
 	&__title {
-		margin-bottom: 60px;
+		padding-bottom: 25px;
+		margin-bottom: 25px;
 		font-size: 36px;
 		line-height: 1;
 		position: relative;
@@ -170,14 +189,14 @@ a, button {
 			width: 100px;
 			height: 1px;
 			background-color: $color-main-decoration;
-			bottom: -95%;
+			bottom: 0;
 			left: 50%;
 			transform: translateX(-50%);
 		}
 	}
 
 	&__subtitle {
-		margin-bottom: 26px;
+		margin-bottom: 25px;
 		font-size: 24px;
 	}
 
@@ -189,47 +208,53 @@ a, button {
 		position: relative;
 		max-width: (425 / 575) *100%;
 		@include push--auto;
-		margin-bottom: 52px;
+		padding-bottom: 20px;
+		margin-bottom: 25px;
 		color: #333333;
 
 		&:after {
 			@include pseudo;
 			width: (52 / 425) * 100%;
 			height: 4px;
-			bottom: -24px;
+			bottom: 0;
 			left: 50%;
 			transform: translateX(-50%);
 			background-image: linear-gradient(to right, $color-main-decoration 0%, $color-main-decoration 20%, transparent 20%, transparent 30%, $color-main-decoration 30%, $color-main-decoration 70%, transparent 70%, transparent 80%, $color-main-decoration 80%, $color-main-decoration 100%);
 		}
 
 	}
-}
 
-.transition {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	&__arrow {
+		@include pseudo;
+		cursor: pointer;
+		width: 24px;
+		height: 24px;
+		border-top: 4px solid $color-main-decoration;
+		border-right: 4px solid $color-main-decoration;
+		top: 50%;
 
-	&--left {
-		left: 0;
-	}
+		&--left {
+			transform: rotate(-135deg);
+			left: 0;
+		}
 
-	&--right {
-		right: 0;
+		&--right {
+			transform: rotate(45deg);
+			right: 0;
+		}
+
+		&:hover {
+			border-color: #000;
+		}
 	}
 }
 
 .socials-list {
 	width: auto;
-	display: flex;
-	justify-content: center;
+	display: inline-flex;
+	list-style: none;
 
 	&__item {
-		width: (31 / 575) * 100%;
-		height: auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		margin-right: 5px;
 		&:last-child {
 			margin-right: 0;
@@ -237,10 +262,11 @@ a, button {
 	}
 
 	&__link {
-		padding: 6.3% 0;
-		display: block;
-		width: 100%;
-		text-align: center;
+		display: flex;
+		width: 30px;
+		height: 30px;
+		justify-content: center;
+		align-items: center;
 		border-radius: 50%;
 		border: solid 2px #cccccc;
 
@@ -260,7 +286,7 @@ a, button {
 
 .btn {
 	position: relative;
-	display: block;
+	display: inline-block;
 	@include push--auto;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -293,16 +319,6 @@ a, button {
 	font-size: 0;
 	text-align: center;
 
-	&:after {
-		@include pseudo;
-		width: 1px;
-		height: 560px;
-		background-color: $color-main-decoration;
-		bottom: 400%;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
 	&__item {
 		display: inline-block;
 		background-color: $color-main-decoration;
@@ -317,11 +333,8 @@ a, button {
 		width: 11px;	
 		height: 11px;
 
-		&:focus {
-			border-color: $color-text-base;
-			background-color: $bg-color-active;
-		}
-
+		
+		&:focus,
 		&:hover {
 			background: $bg-main;
 			border-color: $color-main-decoration;

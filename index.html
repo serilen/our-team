@@ -16,69 +16,70 @@
 
 </head>
 <body>
+	<header class="header">
+		<div class="container">
+			<p class="header__slogan">The geniuses behind our work</p>
+			<h1 class="header__title title">Our team</h1>
+		</div>
+	</header>
 	<main class="section-main">
 		<div class="container">
-			<p class="section-main__descr">The geniuses behind our work</p>
-			<h1 class="section-main__title title">Our team</h1>
-			
-			<div class="team-card">
-				<div class="transition transition--left">
-					<a class="link team-card__link" href="#">
-						<img class="img-responsive" src="image/angle-left-icon.png" alt="angle icon">
-					</a>
-				</div>
-				<div class="transition transition--right">
-					<a class="link team-card__link" href="#">
-						<img class="img-responsive" src="image/angle-right-icon.png" alt="angle icon">
-					</a>
-				</div>
+			<div class="slider">
+				<a class="slider__arrow slider__arrow--left">
+				</a>
 				<div class="row">
 					<div class="col-6">
-						<div class="wrap-img">
-							<img class="team-card__img img-responsive" src="image/foto-sahariar-kabir.png" alt="photo Sahariar Kabir">
-						</div>
-					</div> <!--end col-6-->
-
+						<div class="slider__item">
+							<div class="wrap-img">
+								<img class="slider__img img-responsive" src="image/foto-sahariar-kabir.png" alt="photo Sahariar Kabir">
+							</div>
+						</div> <!--end col-6-->
+					</div>
 					<div class="col-6">
-						<div class="team-card__info">
-							<h2 class="team-card__title title">Sahariar Kabir</h2>
-							<p class="team-card__subtitle">Frontend Developer</p>
-							<ul class="socials-list team-card__socials-list">
-								<li class="socials-list__item">
-									<a class="socials-list__link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-										<img src="image/facebook-icon.png" alt="facebook icon">
-									</a>
-								</li>
-								<li class="socials-list__item">
-									<a class="socials-list__link" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-										<img src="image/twitter-icon.png" alt="twitter icon">
-									</a>
-								</li>
-								<li class="socials-list__item">
-									<a class="socials-list__link" href="https://	plus.google.com" target="_blank" rel="noopener noreferrer">
-										<img src="image/google-plus-icon.png" alt="google-plus icon">
-									</a>
-								</li>
-								<li class="socials-list__item">
-									<a class="socials-list__link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-										<img src="image/linkedi-icon.png" alt="linkedin icon">
-									</a>
-								</li>
-							</ul>
+						<div class="slider__item">
+							<div class="slider__info">
+								<h2 class="slider__title title">Sahariar Kabir</h2>
+								<p class="slider__subtitle">Frontend Developer</p>
+								<ul class="socials-list slider__socials-list">
+									<li class="socials-list__item">
+										<a class="socials-list__link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+											<img src="image/facebook-icon.png" alt="facebook icon">
+										</a>
+									</li>
+									<li class="socials-list__item">
+										<a class="socials-list__link" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+											<img src="image/twitter-icon.png" alt="twitter icon">
+										</a>
+									</li>
+									<li class="socials-list__item">
+										<a class="socials-list__link" href="https://	plus.google.com" target="_blank" rel="noopener noreferrer">
+											<img src="image/google-plus-icon.png" alt="google-plus icon">
+										</a>
+									</li>
+									<li class="socials-list__item">
+										<a class="socials-list__link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+											<img src="image/linkedi-icon.png" alt="linkedin icon">
+										</a>
+									</li>
+								</ul>
 
-							<p class="team-card__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dui sit amet ligula efficitur, sit amet lacinia massa dictum. Etiam accumsan felis a nunc facilisis, ut euismod lacus placerat. Praesent rutrum eget massa a convallis. Nam vitae augue malesuada, accumsan mauris ut, consectetur.</p>
+								<p class="slider__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dui sit amet ligula efficitur, sit amet lacinia massa dictum. Etiam accumsan felis a nunc facilisis, ut euismod lacus placerat. Praesent rutrum eget massa a convallis. Nam vitae augue malesuada, accumsan mauris ut, consectetur.</p>
 
-							<button type="button" class="btn">View profile</button>
-						</div>
-					</div>  <!--end col-6-->
+								<button type="button" class="btn">View profile</button>
+							</div>
+						</div>  <!--end col-6-->
+					</div>
+					<a class="slider__arrow slider__arrow--right">
+					</a>
 				</div>  <!--end row-->
-			</div>
+			</div> 
+
 			<ul class="dots">
 				<li class="dots__item">
 					<a href="#" class="dots__link"></a>
 				</li>
 				<li class="dots__item">
-					<a href="#" class="dots__link"></a>
+					<a href="#" class="dots__link" selected></a>
 				</li>
 				<li class="dots__item">
 					<a href="#" class="dots__link"></a>
