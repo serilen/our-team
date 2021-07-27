@@ -87,7 +87,7 @@ ul {
   padding-left: 0; }
 
 h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0; }
+  margin: 0; }
 
 a, button {
   outline: none; }
@@ -104,19 +104,18 @@ a, button {
   padding: 0 15px; }
 
 .header {
-  padding-top: 90px; }
+  padding-top: 90px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  text-align: center; }
   .header__slogan {
     color: #898f8f;
-    text-transform: uppercase;
-    text-align: center;
     font-size: 18px;
     line-height: 1.5; }
   .header__title {
     color: #ffcc00;
     font-size: 60px;
     line-height: 1.05;
-    text-align: center;
-    text-transform: uppercase;
     position: relative;
     padding-bottom: 40px; }
     .header__title:after, .header__title:before {
@@ -165,8 +164,9 @@ a, button {
   padding-bottom: 75px; }
 
 .slider {
-  position: relative;
-  margin-bottom: 45px; }
+  position: relative; }
+  .slider__item {
+    margin-bottom: 45px; }
   .slider__arrow {
     content: "";
     display: block;
