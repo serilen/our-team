@@ -104,8 +104,7 @@ a, button {
   padding: 0 15px; }
 
 .header {
-  padding-top: 90px;
-  margin-bottom: 40px; }
+  padding-top: 90px; }
   .header__slogan {
     color: #898f8f;
     text-transform: uppercase;
@@ -162,54 +161,81 @@ a, button {
   .link:active {
     background-color: #ecec66; }
 
-.wrap-img {
-  padding: 15px;
-  width: 71.82131%;
-  height: auto;
-  top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  background: -webkit-gradient(linear, left top, right top, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00)), -webkit-gradient(linear, left top, right top, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00)), -webkit-gradient(linear, left top, left bottom, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00)), -webkit-gradient(linear, left top, left bottom, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00));
-  background: -webkit-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -webkit-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -webkit-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -webkit-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%);
-  background: -o-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -o-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -o-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -o-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%);
-  background: linear-gradient(to right, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), linear-gradient(to right, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), linear-gradient(to bottom, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), linear-gradient(to bottom, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%);
-  background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
-  background-position: 0 0, 0 100%, 0 0, 100% 0;
-  background-repeat: no-repeat; }
-
 .section-main {
   padding-bottom: 75px; }
 
 .slider {
   position: relative;
-  padding-top: 75px;
+  margin-bottom: 45px; }
+  .slider__arrow {
+    content: "";
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border-top: 4px solid #ffcc00;
+    border-right: 4px solid #ffcc00;
+    top: 50%;
+    z-index: 2; }
+    .slider__arrow--left {
+      -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+      left: 0; }
+    .slider__arrow--right {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      right: 0; }
+    .slider__arrow:hover {
+      border-color: #000; }
+
+.user-card {
+  position: relative;
   text-align: center;
-  margin-bottom: 110px; }
-  .slider:after {
+  padding: 70px 0; }
+  .user-card:after {
     content: "";
     display: block;
     position: absolute;
     width: 1px;
-    height: 560px;
+    height: 100%;
     background-color: #ffcc00;
     top: 0;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
-  .slider__img {
+  .user-card__wrap-img {
+    padding: 15px;
+    width: 71.82131%;
+    height: auto;
+    top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: -webkit-gradient(linear, left top, right top, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00)), -webkit-gradient(linear, left top, right top, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00)), -webkit-gradient(linear, left top, left bottom, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00)), -webkit-gradient(linear, left top, left bottom, from(#ffcc00), color-stop(24%, #ffcc00), color-stop(24%, transparent), color-stop(76%, transparent), color-stop(76%, #ffcc00), to(#ffcc00));
+    background: -webkit-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -webkit-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -webkit-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -webkit-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%);
+    background: -o-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -o-linear-gradient(left, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -o-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), -o-linear-gradient(top, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%);
+    background: linear-gradient(to right, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), linear-gradient(to right, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), linear-gradient(to bottom, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%), linear-gradient(to bottom, #ffcc00 0%, #ffcc00 24%, transparent 24%, transparent 76%, #ffcc00 76%, #ffcc00 100%);
+    background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    background-repeat: no-repeat; }
+  .user-card__img {
     border: 1px solid #ffcc00;
     margin-left: auto;
     margin-right: auto; }
-  .slider__info {
-    padding-top: 15px; }
-  .slider__title {
+  .user-card__info {
+    padding-top: 15px;
+    max-width: 77%;
+    margin: auto; }
+  .user-card__title {
     padding-bottom: 25px;
     margin-bottom: 25px;
     font-size: 36px;
     line-height: 1;
     position: relative; }
-    .slider__title:after {
+    .user-card__title:after {
       content: "";
       display: block;
       position: absolute;
@@ -221,20 +247,19 @@ a, button {
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%); }
-  .slider__subtitle {
+  .user-card__subtitle {
     margin-bottom: 25px;
     font-size: 24px; }
-  .slider__socials-list {
+  .user-card__socials-list {
     margin-bottom: 30px; }
-  .slider__descr {
+  .user-card__descr {
     position: relative;
-    max-width: 73.91304%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 20px;
     margin-bottom: 25px;
     color: #333333; }
-    .slider__descr:after {
+    .user-card__descr:after {
       content: "";
       display: block;
       position: absolute;
@@ -249,28 +274,6 @@ a, button {
       background-image: -webkit-linear-gradient(left, #ffcc00 0%, #ffcc00 20%, transparent 20%, transparent 30%, #ffcc00 30%, #ffcc00 70%, transparent 70%, transparent 80%, #ffcc00 80%, #ffcc00 100%);
       background-image: -o-linear-gradient(left, #ffcc00 0%, #ffcc00 20%, transparent 20%, transparent 30%, #ffcc00 30%, #ffcc00 70%, transparent 70%, transparent 80%, #ffcc00 80%, #ffcc00 100%);
       background-image: linear-gradient(to right, #ffcc00 0%, #ffcc00 20%, transparent 20%, transparent 30%, #ffcc00 30%, #ffcc00 70%, transparent 70%, transparent 80%, #ffcc00 80%, #ffcc00 100%); }
-  .slider__arrow {
-    content: "";
-    display: block;
-    position: absolute;
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    border-top: 4px solid #ffcc00;
-    border-right: 4px solid #ffcc00;
-    top: 50%; }
-    .slider__arrow--left {
-      -webkit-transform: rotate(-135deg);
-      -ms-transform: rotate(-135deg);
-      transform: rotate(-135deg);
-      left: 0; }
-    .slider__arrow--right {
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-      right: 0; }
-    .slider__arrow:hover {
-      border-color: #000; }
 
 .socials-list {
   width: auto;
